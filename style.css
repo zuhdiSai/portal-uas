@@ -1,0 +1,157 @@
+/* ================= GLOBAL STYLES ================= */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #eeedecf1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #dc3545;
+}
+
+/* Helper Class Borders */
+body .border,
+body .border-bottom {
+    border-color: #dc3545 !important;
+}
+
+/* ================= NAVBAR & NAVIGATION ================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+#categoryNav {
+    display: flex !important;
+    justify-content: center !important;
+    padding-left: 0 !important;
+    margin: 0 auto !important;
+    list-style: none !important;
+    width: 100%;
+}
+
+.category-link {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    align-items: center;
+}
+
+.category-link:hover {
+    color: #dc3545 !important;
+}
+
+/* ================= JUMBOTRON / HERO ================= */
+.hero-main {
+    height: 500px;
+    object-fit: cover;
+}
+
+.news-overlay {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.827));
+}
+
+/* ================= OFFCANVAS / SIDEBAR ================= */
+.offcanvas-body h6 {
+    color:#333131 !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+}
+
+.custom-switch {
+    width: 3.5rem !important;
+    height: 1.50rem !important; 
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.dark-mode-box {
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+/* ================= DARK MODE ================= */
+body.dark-mode {
+    background-color: #121212 !important;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .offcanvas,
+body.dark-mode .card,
+body.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+    color: #dc3545 !important;
+}
+
+body.dark-mode .navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .dark-mode-box {
+    background-color: #2b2b2b !important;
+    border: none !important;
+}
+
+body.dark-mode .text-dark,
+body.dark-mode .category-link,
+body.dark-mode a {
+    color: #f8f9fa !important;
+}
+
+body.dark-mode .offcanvas-body h6 {
+    color: #f9f9f9 !important;
+}
+
+/* Dark Mode Borders */
+body.dark-mode .border,
+body.dark-mode .border-bottom,
+body.dark-mode h5.border-bottom {
+    border-color: #dc3545 !important;
+}
+
+body.dark-mode .border-top,
+body.dark-mode .border-start,
+body.dark-mode .border-end,
+body.dark-mode .border-dark {
+     border-color: #dc35462d !important; 
+}
+
+/* ================= RESPONSIVE (MOBILE) ================= */
+@media (max-width: 991.98px) {
+    .navbar .col-6 { padding: 0; }
+    
+    #middleColumn {
+        order: -1; 
+        margin-bottom: 2rem;
+    }
+    
+    .border-end, .border-start { border: none !important; }
+
+    .navbar .col-3.d-none {
+        display: block !important; 
+        visibility: hidden; 
+    }
+    
+    .navbar h1 { font-size: 1.2rem !important; }
+    
+    .navbar small {
+        padding-top: 0.5rem;
+        font-size: 0.5rem !important;
+        letter-spacing: 2px !important;
+    }
+    
+    .navbar .row.mb-3 { margin-bottom: 0rem !important; }
+    .category-link {
+        font-size: 0.6rem !important; 
+        padding: 4px 6px !important;  
+        letter-spacing: 0.5px;   
+    }
+    
+    #categoryNav { gap: 2px !important; }
+    .hero-main {
+        height: 250px !important; 
+    }
+}
